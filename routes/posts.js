@@ -19,7 +19,7 @@ router.get('/all', verify, (req, res) => {
 
 
 //Specific post
-// router.get('/:postId', async (req, res) => {
+// router.get('/:postId', verify, async (req, res) => {
 //     try {
 //         const post = await Post.findById(req.params.postId);
 //         res.json(post);
@@ -29,7 +29,7 @@ router.get('/all', verify, (req, res) => {
 // })
 
 //Delete Post
-// router.delete('/:postId', async (req, res) => {
+// router.delete('/:postId', verify, async (req, res) => {
 //     try {
 //         const deletePost = await Post.remove({ _id: req.params.postId });
 //         res.json(deletePost);
@@ -39,7 +39,7 @@ router.get('/all', verify, (req, res) => {
 // })
 
 //Update Post
-// router.patch('/:postId', async (req, res) => {
+// router.patch('/:postId', verify, async (req, res) => {
 //     try {
 //         const updatedPost = await Post.updateOne(
 //             { _id: req.params.postId }, 

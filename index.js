@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 //Import Routes
 const authRoute = require('./routes/auth');
@@ -13,6 +14,7 @@ dotenv.config();
 mongoose.connect( process.env.DB_CONNECT, { useUnifiedTopology: true, useNewUrlParser: true }, () => { console.log('connected to db!');});
 
 //Middleware
+app.use(cors());    //allow cross-origin
 app.use(express.json());
 
 //Route Middlewares
