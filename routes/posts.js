@@ -13,6 +13,16 @@ router.get('/', verify, (req, res) => {
     });
 });
 
+//Specific post
+// router.get('/:postId', async (req, res) => {
+//     try {
+//         const post = await Post.findById(req.params.postId);
+//         res.json(post);
+//     } catch (error) {
+//         res.json({ message: err});
+//     }
+// })
+
 router.get('/all', verify, (req, res) => {
     res.send('All POSTS');
 });
