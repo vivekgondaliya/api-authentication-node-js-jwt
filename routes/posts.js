@@ -13,6 +13,11 @@ router.get('/', verify, (req, res) => {
     });
 });
 
+router.get('/all', verify, (req, res) => {
+    res.send('All POSTS');
+});
+
+
 //Specific post
 // router.get('/:postId', async (req, res) => {
 //     try {
@@ -23,9 +28,16 @@ router.get('/', verify, (req, res) => {
 //     }
 // })
 
-router.get('/all', verify, (req, res) => {
-    res.send('All POSTS');
-});
+//Delete Post
+// router.delete('/:postId', async (req, res) => {
+//     try {
+//         const deletePost = await Post.remove({ _id: req.params.postId });
+//         res.json(deletePost);
+//     } catch (error) {
+//         res.json({ message: err});
+//     }
+// })
+
 
 // POST
 // router.post('/', verify, async (req, res) => {
